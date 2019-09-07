@@ -1,0 +1,15 @@
+import random 
+#AA = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+seed = input ("Input any number:")
+random.seed(seed)
+#results = random.choices(AA)
+result = random.randint(1, 10)
+
+print ("First time Random number generated based on the input:")
+print (result)
+
+while (result == seed):
+    random.seed(result)
+    result = random.randint(1, 10)
+    print ("Another time Random number generated based on the input:")
+    print (result)
